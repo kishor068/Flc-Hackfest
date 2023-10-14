@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Edit Details</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel=”stylesheet” href=”https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css” />
+  <link rel="stylesheet" href="css/admission.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:wght@100;300;700;900&family=Playfair+Display:wght@500&family=Sacramento&family=Teko&family=Ubuntu&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/57370804b4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+
+    <!-- Navbar -->
+
+    <div id="navbar-cont" class="navbar-container">
+      <nav class="navbar navbar-light" style="background-color: #600E0E;">
+        <h6><img class="nav-img nav-phone" src="Images/phone.png">: +971 4 337 7475</h6>
+        <h6><img class="nav-img nav-email" src="Images/email.png">: someone@gmail.com</h6>
+      </nav>
+      <div class="glass navbar">
+        <h2 class="glass-head">
+          <img class="glass-logo" src="Images/main-logo.png">NITTE UNIVERSITY</img>
+          <button class="btn navbar-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" tabindex="-1" aria-controls="offcanvasWithBothOptions">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </h2>
+      </div>
+
+      <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"> <img class="offcanvas-logo" src="Images/main-logo.png">Nitte University</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close" style="filter: invert(1);"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav">
+            <li class="nav-item "><a class="nav-link" href="/studentpage">Profile</a></li>
+            <li class="nav-item "><a class="nav-link" href="/changedetails">Change Details</a></li>
+            <li class="nav-item "><a class="nav-link active" href="/certificate">Certificates</a></li>
+            <li class="nav-item "><a class="nav-link active" href="/documents">Documents Status</a></li>
+            <li class="nav-item "><a class="nav-link active" href="/payment">Payment Status</a></li>
+            <li class="nav-item "><a class="nav-link active" href="/changepassword">Change Password</a></li>
+            <li class="nav-item "><a class="nav-link active" href="/">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+
+  <main>
+    <h1>Admission Form</h1>
+
+    <div class="name-container main-container">
+
+      <form action="/changedetails" method="post">
+
+
+        <div class="mini-container row">
+
+          <div class="col-lg-4 col-md-6 col-sm-12 row">
+            <label class="firstName_label" for="firstName">First Name:<br><input class="firstName_input form-control" type="text" name="firstName" placeholder="<%= foundItem.firstName %>"></label>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12 row">
+            <label class="middleName_label" for="middleName">Middle Name:<br><input class="middleName_input form-control" type="text" name="middleName" placeholder="<%= foundItem.middleName %>"></label>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12 row">
+            <label class="lastName_label" for="lastName">Last Name:<br><input class="lastName_input form-control" type="text" name="lastName" placeholder="<%= foundItem.lastName %>"></label>
+          </div>
+
+        </div>
+
+
+        <div class="parent_container mini-container row">
+
+          <div class="col-lg-4 col-md-6 col-sm-12 row">
+            <label class="fatherName_label" for="fatherName">Parent/Guardian Name:<br><input class="fatherName_input form-control" type="text" name="parentName" placeholder="<%= foundItem.parentName %>"></label>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12 row">
+            <label class="motherNam_label" for="motherName">Parent/Guardian Number:<br><input class="motherName_input form-control" type="tel" name="parentNumber" placeholder="<%= foundItem.parentNumber %>"></label>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12 row">
+            <label class="parentNumber_label" for="parentNumber">Parent/Guardian Email:<br><input class="parentNumber_input form-control" type="email" name="parentEmail" placeholder="<%= foundItem.parentEmail %>"></label>
+          </div>
+
+        </div>
+
+
+        <div class="studentDetails_container mini-container row">
+
+          <div class="col-lg-4 col-md-6 col-sm-12 row">
+            <label class="DOB_label" for="DOB">Date of Birth:<br><input class="DOB_input form-control" type="date" name="dateOfBirth" placeholder="<%= foundItem.dateOfBirth %>"></label>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12 row">
+            <label class="studentPhone_label" for="studentPhone">Student Phone Number:<br><input class="studentPhon_input form-control" type="number" name="studentPhone" placeholder="<%= foundItem.studentPhone %>"></label>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12 row">
+            <label class="studentEmail_label" for="studentEmail">Student Email Address:<br><input class="studentEmail_input form-control" type="email" name="studentEmail" placeholder="<%= foundItem.studentEmail %>"></label>
+          </div>
+
+        </div>
+
+
+        <div class="adhaar_container mini-container row">
+
+          <div class="col-lg-4 col-md-6 col-sm-12 row">
+            <label class="course_label" for="course">Course:<br>
+              <select class="course_input form-control">
+                <option>Cannot be changed. Contact admin for further queries</option>
+              </select></label>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12 row">
+            <label class="adhaarNumber_label" for="adhaarNumber">Adhaar Card Number:<br><input class="adhaarNumber_input form-control" type="number" name="adhaarNumber" placeholder="<%= foundItem.adhaarNumber %>"></label>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12 row">
+            <label class="adhaarCard_label" for="adhaarCard">Adhaar Card:<br><input class="adhaarCard_input form-control" placeholder="-----"></label>
+          </div>
+
+        </div>
+
+
+        <div class="tenth_container mini-container row">
+
+          <div class="col-lg-4 col-md-6 col-sm-12 row">
+            <label class="tenthPassingMonth_label" for="tenthPassingMonth">10th Month of Passing:<br><input class="tenthPassingMonth_input form-control" type="month" name="tenthPassingMonth" placeholder="<%= foundItem.tenthPassingMonth %>"></label>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12 row">
+            <label class="tenthMarks_label" for="tenthMarks">10th Marks:<br><input class="tenthMarks_input form-control" type="number" name="tenthMarks" placeholder="<%= foundItem.tenthMarks %>%"></label>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12 row">
+            <label class="tenthMarkSheet_label" for="tenthMarkSheet">10th Mark Sheet:<br><input class="tenthMarkSheet_input form-control" placeholder="-----"></label>
+          </div>
+
+        </div>
+
+
+        <div class="twelfth_container mini-container row">
+
+          <div class="col-lg-4 col-md-6 col-sm-12 row">
+            <label class="twelfthPassingMonth_label" for="twelfthPassingMonth">12th Month of Passing:<br><input class="twelfthPassingMonth_input form-control" type="month" name="twelfthPassingMonth" placeholder="<%= foundItem.twelfthPassingMonth %>"></label>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12 row">
+            <label class="twelfthMarks_label" for="twelfthMarks">12th Marks:<br><input class="twelfthMarks_input form-control" type="number" name="twelfthMarks" placeholder="<%= foundItem.twelfthMarks %>%"></label>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12 row">
+            <label class="twelfthMarkSheet_label" for="twelfthMarkSheet">12th Mark Sheet:<br><input class="twelfthMarkSheet_input form-control" placeholder="-----"></label>
+          </div>
+
+        </div>
+
+
+        <div class="nucat_container mini-container row">
+
+          <div class="col-lg-4 col-md-6 col-sm-12 row">
+            <label class="nucatNo_label" for="nucatNo">NUCAT number:<br><input class="nucatNo_input form-control" type="number" name="nucatNo" placeholder="<%= foundItem.nucatNo %>"></label>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12 row">
+            <label class="nucatRank_label" for="nucatRank">NUCAT Rank:<br><input class="nucatRank_input form-control" type="number" name="nucatRank" placeholder="<%= foundItem.nucatRank %>"></label>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12 row">
+            <label class="nucatMonth_label" for="nucatMonth">NUCAT Month of Attempt:<br><input class="nucatMonth_input form-control" type="month" name="nucatMonth" placeholder="<%= foundItem.nucatMonth %>"></label>
+          </div>
+
+        </div>
+
+        <div class="button">
+          <button class="btn btn-primary btn-lg" type="submit" name="button">Request Changes</button>
+        </div>
+
+
+      </form>
+
+    </div>
+    <!-- Footer -->
+
+    <div class="footer-container row">
+      <div class="col-lg-4 main-logo-container">
+        <a href="/"><img class="main-logo" src="Images/main-logo.png"></a><br>
+        <div class="footer-icons">
+          <a href="#"><img class="footer-icon instagram" src="Images/instagram.png" alt="instagram"></a>
+          <a href="#"><img class="footer-icon facebook" src="Images/facebook.png" alt="facebook"></a>
+          <a href="#"><img class="footer-icon twitter" src="Images/twitter.png" alt="twitter"></a>
+          <a href="#"><img class="footer-icon youtube" src="Images/youtube.png" alt="youtube"></a>
+        </div>
+      </div>
+
+      <!-- Contacts -->
+
+      <div class="col-lg-4 contact">
+        <h3 class="contact-head">Contacts:</h3>
+        <ul>
+          <li class="contact-list"><img class="contact-icon" src="Images/phone.png" alt="phone"> : + 2480 23412</li>
+          <li class="contact-list"><img class="contact-icon" src="Images/whatsapp.png" alt="whatsapp"> : + 91 933634466</li>
+          <li class="contact-list"><img class="contact-icon" src="Images/email.png" alt="email"> : abcdcollege@gmail.com</li>
+        </ul>
+      </div>
+
+      <!-- Address -->
+
+      <div class="col-lg-4 address">
+        <h3 class="address-head">Address:</h3>
+        <p>
+          Street: 10, Madhuban Indl. Est.,<br>
+          Mahakali Caves Road, Andheri (west)<br>
+          City: Mumbai<br>
+          State/province/area: Maharashtra<br>
+          Zip code: 400093<br>
+        </p>
+      </div>
+
+    </div>
+    <div class="copyright">
+      <p>Copyright © 2022 Flchackathon.com All rights reserved.</p>
+    </div>
+
+  </main>
+  <script src="https://kit.fontawesome.com/b2986d2337.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("navbar-cont").style.top = "0";
+    } else {
+      document.getElementById("navbar-cont").style.top = "-11rem";
+    }
+    prevScrollpos = currentScrollPos;
+    }
+  </script>
+</body>
+
+</html>

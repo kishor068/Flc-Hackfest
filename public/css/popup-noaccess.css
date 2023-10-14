@@ -1,0 +1,55 @@
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css');
+
+html,
+body {
+  height: 100%;
+  background-color: black;
+}
+
+.popbox {
+  width: 25rem !important;
+  height: 32rem !important;
+  background-image: linear-gradient(45deg, #D9D9D9, #D9D9D9);
+  border-radius: 3rem;
+  margin: 2.1875rem;
+}
+
+.card {
+  border: 1px solid rgb(255, 255, 255);
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+}
+
+h4 {
+  color: rgb(0, 0, 0);
+  position: relative;
+  padding: 2rem;
+  margin: 0.5rem;
+  top: 10rem;
+  bottom: 2rem;
+  text-align: center;
+}
+
+.first {
+  bottom: 1rem;
+}
+
+.second {
+  bottom: 4.5rem;
+}
+
+h5 {
+  position: relative;
+  top: 10rem;
+  left: 6rem;
+  color: green;
+  text-decoration: solid;
+}
+
+h6 {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+  top: 4rem;
+}

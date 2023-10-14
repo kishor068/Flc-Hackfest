@@ -1,0 +1,284 @@
+/* Navbar */
+  .navbar-container {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    transition: top 0.6s;
+  }
+
+  .navbar {
+    color: white;
+    width: 100%;
+    height: 3rem;
+  }
+
+  .nav-img {
+    height: 2rem;
+    filter: invert(1);
+    padding-left: 1rem;
+  }
+
+  .offcanvas {
+    width: 20%;
+    height: 100vh;
+    color: aliceblue;
+    background-color: #600E0E;
+  }
+
+  .offcanvas-logo {
+    height: 4rem;
+    -webkit-filter: drop-shadow(1px 1px 1px white);
+    filter: drop-shadow(1px 1px 1px white);
+    padding-right: 1rem;
+  }
+
+  .header-container {
+    position: absolute;
+  }
+
+  .glass {
+    height: 8rem;
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .glass-logo {
+    height: 6rem;
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+    -webkit-filter: drop-shadow(1px 1px 1px white);
+    filter: drop-shadow(1px 1px 1px white);
+  }
+
+  .glass-head {
+    color: white;
+    padding-top: 1rem;
+  }
+
+  .navbar-btn{
+    margin-left: 65rem;
+    margin-right: 2rem;
+  }
+
+  .fa-bars{
+    filter: invert(1);
+  }
+
+
+/* Main Content */
+
+html{
+  overflow-x: hidden;
+}
+
+main{
+  margin-top: 11rem;
+}
+
+.cont_box {
+  margin-bottom: 5rem;
+}
+
+.details {
+  background-color: #E1E5EA;
+  border-radius: 5rem;
+  padding: 3rem;
+}
+.head
+{
+   font-size: 60px;
+   margin: 3rem;
+}
+.d {
+  display: flex;
+  flex-wrap: wrap;
+}
+.d_head {
+  border-right: 2px solid black;
+  padding: 2rem;
+  width: 20rem;
+  font-size: 25px;
+  font-weight: bold;
+}
+.d_content {
+  padding: 2rem;
+  font-size: 25px;
+  padding-left: 6rem;
+  margin-right: 0px !;
+}
+.butn
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+}
+.submit-btn
+{
+    margin:2rem 6rem 1rem 3rem;
+    width: 8rem;
+    height: 3rem;
+}
+.Email
+{
+    padding-right: 0px !important;
+}
+a
+{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: antiquewhite;
+}
+
+.no-new {
+  margin-left: 3rem;
+  font-size: 3rem;
+  color: black;
+}
+
+@media screen and  (max-width:1000px)
+{
+    .d_head
+    {
+        width: 12rem;
+        font-size: 20px;
+    }
+    .d_content
+    {
+        padding-left: 1rem;
+        font-size: 20px;
+    }
+    .submit-btn
+    {
+        margin: 0;
+    }
+}
+@media (max-width:800px)
+{
+    .d_head
+    {
+      padding:1rem
+    }
+    .d_content
+    {
+        padding: 1rem;
+    }
+}
+@media  (max-width:540px) {
+     .submit-btn{
+        margin: 0;
+        width:125%;
+     }
+
+}
+@media (min-width:250px) and (max-width:530px)
+{
+    .d{
+        display: block;
+        margin:2rem;
+    }
+    .butn
+    {
+       justify-content: space-evenly;
+    }
+    button
+    {
+        width: 8rem;
+        margin:0.6rem;
+    }
+    .d_head
+    {
+        width: 8rem;
+        font-size: 20px;
+        border: 0;
+        margin-bottom: 5px;
+        padding: 3px;
+    }
+    .d_content
+    {
+        padding-left: 0rem;
+        font-size: 20px;
+        padding: 3px;
+
+    }
+}
+
+
+/* Footer */
+.footer-container {
+  background-color: #600E0E;
+  height: 20rem;
+  width: auto;
+  display: flex;
+  color: white;
+  margin-top: 4.91rem;
+}
+
+/* Copyright */
+.copyright {
+  background-color: black;
+  width: 100%;
+  text-align: center;
+  color: aliceblue;
+  font-size: 1.7rem;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Logo */
+.main-logo {
+  height: 10rem;
+  -webkit-filter: drop-shadow(1px 1px 1px white);
+  filter: drop-shadow(1px 1px 1px white);
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  padding-left: 7rem;
+}
+
+.main-logo-container {
+  padding-left: 8rem;
+}
+
+.footer-icon {
+  height: 2rem;
+  filter: invert(1);
+  padding: inherit;
+}
+
+.footer-icons {
+  margin-left: auto;
+  padding-left: 6.7rem;
+}
+
+/* Contacts */
+.contact-icon {
+  height: 2rem;
+  filter: invert(1);
+  text-align: center;
+}
+
+.contact {
+  padding-top: 4rem;
+  padding-left: 8rem;
+}
+
+.contact-list {
+  padding-bottom: 1rem;
+}
+
+.contact-head {
+  padding-left: 3rem;
+  padding-bottom: 1rem;
+}
+
+/* Address */
+.address {
+  padding-left: 8rem;
+}
+
+.address-head {
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+}

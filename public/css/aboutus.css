@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
+
+/* Navbar */
+  .navbar-container {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    transition: top 0.6s;
+  }
+
+  .navbar {
+    color: white;
+    width: 100%;
+    height: 3rem;
+  }
+
+  .nav-img {
+    height: 2rem;
+    filter: invert(1);
+    padding-left: 1rem;
+  }
+
+  .offcanvas {
+    width: 20%;
+    height: 100vh;
+    color: aliceblue;
+    background-color: #600E0E;
+  }
+
+  .offcanvas-logo {
+    height: 4rem;
+    -webkit-filter: drop-shadow(1px 1px 1px white);
+    filter: drop-shadow(1px 1px 1px white);
+    padding-right: 1rem;
+  }
+
+  .header-container {
+    position: absolute;
+  }
+
+  .glass {
+    height: 8rem;
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .glass-logo {
+    height: 6rem;
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+    -webkit-filter: drop-shadow(1px 1px 1px white);
+    filter: drop-shadow(1px 1px 1px white);
+  }
+
+  .glass-head {
+    color: white;
+    padding-top: 1rem;
+  }
+
+  .navbar-btn{
+    margin-left: 65rem;
+    margin-right: 2rem;
+  }
+
+  .fa-bars{
+    filter: invert(1);
+  }
+
+/* Main Content */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.title {
+  text-align: center;
+  font-weight: 400;
+  font-size: 48px;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.history-image img {
+  max-width: 500px;
+}
+
+.history-section, .facility-section {
+  display: flex;
+  padding: 6rem;
+  gap: 5rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.history-section{
+  margin-top: 5rem;
+}
+
+.facility-section {
+  flex-direction: row-reverse;
+}
+
+.history-section .history-contents .history-title, .facility-section .facility-contents .facility-title {
+  font-weight: 700;
+  font-size: 30px;
+  padding: 5px;
+}
+
+.history-image {
+  display: flex;
+  justify-content: center;
+}
+
+.history-section .history-contents, .facility-contents {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 29.605px;
+  line-height: 52px;
+  letter-spacing: 0.02em;
+  padding: 5px;
+}
+
+.facility-image {
+  max-width: 500px;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+}
+
+.facility-image img {
+  width: 250px;
+  display: inline-block;
+  margin: 0;
+}
+
+.quote-section {
+  background-color: #26BCBC;
+  display: flex;
+  padding: 4rem 6rem;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  position: relative;
+  margin-bottom: 6rem;
+}
+
+.quote-image-wrap {
+  width: 20rem;
+  aspect-ratio: 1/1;
+  border-radius: 12000px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.quote-image-wrap img {
+  max-width: 100%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.quote {
+  color: #FFFEFE;
+  font-family: 'Calligraffitti', cursive;
+  font-size: 40px;
+  line-height: 174.2%;
+  letter-spacing: 0.02em;
+}
+
+.quote .q {
+  font-size: 150px;
+  font-family: 'Calligraffitti', cursive;
+  max-height: 20px;
+  position: relative;
+  top: 3rem;
+}
+
+.bottom {
+  color: #832F2F;
+  font-family: 'Arial';
+  font-size: 26px;
+  line-height: 174.2%;
+  letter-spacing: 0.02em;
+  padding: 0 2rem;
+}
+
+@media only screen and (max-width:768px) {
+  .title {
+    font-size: 38px;
+  }
+
+  .history-section, .facility-section, .quote-section {
+    display: block;
+    margin: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding: 2rem 0;
+  }
+
+  .history-section .history-contents, .facility-contents {
+    font-size: 20px;
+    line-height: 130.2%;
+    padding: 1rem;
+  }
+
+  .history-section .history-contents .history-title, .facility-section .facility-contents .facility-title {
+    padding: 2rem 0;
+  }
+
+  .facility-image {
+    display: block;
+    margin: auto;
+  }
+
+  .history-image img {
+    max-width: 100%;
+  }
+
+  .facility-image img {
+    width: 100%;
+  }
+
+  .quote-image-wrap {
+    margin: auto;
+    width: 15rem;
+  }
+
+  .quote-section {
+    padding: 0;
+    position: relative;
+    z-index: -100;
+  }
+
+  .quote-section .quote {
+    padding: 0 2rem;
+  }
+}
+
+@media only screen and (max-width:1006px) {
+  .history-section, .facility-section, .quote-section {
+    display: block;
+    margin: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .facility-image, .history-image {
+    margin: auto;
+  }
+}
+
+/* Footer */
+.footer-container {
+  background-color: #600E0E;
+  height: 20rem;
+  width: auto;
+  display: flex;
+  color: white;
+}
+
+/* Copyright */
+.copyright {
+  background-color: black;
+  width: auto;
+  text-align: center;
+  color: aliceblue;
+  font-size: 1.7rem;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Logo */
+.main-logo {
+  height: 10rem;
+  -webkit-filter: drop-shadow(1px 1px 1px white);
+  filter: drop-shadow(1px 1px 1px white);
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  padding-left: 7rem;
+}
+
+.main-logo-container {
+  padding-left: 8rem;
+}
+
+.footer-icon {
+  height: 2rem;
+  filter: invert(1);
+  padding: inherit;
+}
+
+.footer-icons {
+  margin-left: auto;
+  padding-left: 6.7rem;
+}
+
+/* Contacts */
+.contact-icon {
+  height: 2rem;
+  filter: invert(1);
+  text-align: center;
+}
+
+.contact {
+  padding-top: 4rem;
+  padding-left: 8rem;
+}
+
+.contact-list {
+  padding-bottom: 1rem;
+}
+
+.contact-head {
+  padding-left: 3rem;
+  padding-bottom: 1rem;
+}
+
+/* Address */
+.address {
+  padding-left: 8rem;
+}
+
+.address-head {
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+}
